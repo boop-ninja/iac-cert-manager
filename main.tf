@@ -19,10 +19,10 @@ resource "kubernetes_namespace" "i" {
 resource "helm_release" "i" {
   depends_on = [kubernetes_namespace.i]
   namespace = kubernetes_namespace.i.metadata[0].name
-  chart = "jetstack/cert-manager"
+  chart = "cert-manager"
   repository = "https://charts.jetstack.io"
   name  = local.name
-  version = "1.11.0"
+  version = "v1.11.0"
 
   set {
       name = "installCRDs"
