@@ -4,7 +4,7 @@ locals {
     "app.kubernetes.io/name" = local.name
     "app.kubernetes.io/instance" = local.name
     "app.kubernetes.io/managed-by" = "Terraform"
-    "app.kubernetes.io/version" = terraform.version
+#    "app.kubernetes.io/version" = terraform.version
   }
 }
 
